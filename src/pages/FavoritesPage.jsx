@@ -16,7 +16,7 @@ export default function FavoritesPage({ onRecipeClick, favorites, onToggleFavori
     const favoriteRecipes = allRecipes.filter(recipe => favorites.includes(recipe.id));
 
     setFilteredRecipes(favoriteRecipes);
-    setCurrentPage(1); // Reset to first page when favorites change
+    setCurrentPage(1); 
   }, [favorites]);
 
   const totalPages = Math.ceil(filteredRecipes.length / itemsPerPage);
@@ -38,7 +38,7 @@ export default function FavoritesPage({ onRecipeClick, favorites, onToggleFavori
         </p>
         <RecipeGrid recipes={paginatedRecipes} onRecipeClick={onRecipeClick} favorites={favorites} onToggleFavorite={onToggleFavorite} />
 
-        {/* Pagination */}
+        
         {totalPages > 1 && (
           <div className="flex justify-center mt-8 space-x-2">
             <button
@@ -80,3 +80,4 @@ export default function FavoritesPage({ onRecipeClick, favorites, onToggleFavori
     </div>
   );
 }
+
