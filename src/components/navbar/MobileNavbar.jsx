@@ -1,4 +1,3 @@
-// src/components/MobileNavbar.jsx
 import { Home, ChefHat, Coffee, Heart, User } from 'lucide-react';
 
 export default function MobileNavbar({ currentPage, onNavigate }) {
@@ -39,4 +38,5 @@ export default function MobileNavbar({ currentPage, onNavigate }) {
       </div>
     </nav>
   );
+
 }
