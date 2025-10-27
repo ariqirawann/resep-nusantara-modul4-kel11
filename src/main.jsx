@@ -1,4 +1,3 @@
-// src/main.jsx
 import { StrictMode, useState, createContext, useContext, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import SplashScreen from './pages/SplashScreen';
@@ -13,7 +12,6 @@ import MobileNavbar from './components/navbar/MobileNavbar';
 import './index.css'
 import PWABadge from './PWABadge';
 
-// Create context for profile pictures
 export const ProfileContext = createContext();
 
 function AppRoot() {
@@ -88,15 +86,12 @@ function AppRoot() {
   return (
     <ProfileContext.Provider value={{ profilePictures, handleProfilePictureChange }}>
       <div className="min-h-screen bg-gray-50">
-        {/* Desktop Navbar */}
         <DesktopNavbar currentPage={currentPage} onNavigate={handleNavigation} />
 
-        {/* Main Content */}
         <main className="min-h-screen">
           {renderCurrentPage()}
         </main>
 
-        {/* Mobile Navbar */}
         <MobileNavbar currentPage={currentPage} onNavigate={handleNavigation} />
 
         <PWABadge />
