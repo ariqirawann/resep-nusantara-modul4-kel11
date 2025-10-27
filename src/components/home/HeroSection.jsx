@@ -1,4 +1,3 @@
-// src/components/home/HeroSection.jsx
 import { ChefHat, Play, ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
@@ -43,8 +42,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Bottom Images - Mobile Grid */}
-            <div className="grid grid-cols-2 gap-3">
+             <div className="grid grid-cols-2 gap-3">
               <div className="relative group">
                 <div className="bg-white/15 backdrop-blur-2xl border border-white/25 rounded-2xl overflow-hidden shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/20 transition-all duration-500 hover:scale-105">
                   <div className="w-full h-20 overflow-hidden">
@@ -72,7 +70,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex flex-col space-y-3 max-w-xs mx-auto">
           <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-2xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 text-sm">
             <ChefHat className="w-4 h-4" />
@@ -88,7 +85,6 @@ export default function HeroSection() {
       <div className="hidden md:block relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Content */}
           <div className="text-center lg:text-left">
             <div className="mb-10">
               <h2 className="text-5xl lg:text-6xl font-medium text-slate-800 mb-4">
@@ -106,7 +102,6 @@ export default function HeroSection() {
               </p>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
               <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 text-lg">
                 <ChefHat className="w-6 h-6" />
@@ -120,7 +115,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content */}
           <div className="relative max-w-2xl mx-auto lg:max-w-2xl">
             <div className="space-y-6">
               <div className="relative group">
@@ -135,7 +129,6 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Bottom Images */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="relative group">
                   <div className="bg-white/15 backdrop-blur-2xl border border-white/25 rounded-3xl overflow-hidden shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/20 transition-all duration-500 hover:scale-105">
@@ -167,4 +160,5 @@ export default function HeroSection() {
       </div>
     </section>
   );
+
 }
