@@ -1,4 +1,3 @@
-// src/components/home/FeaturedMinumanSection.jsx
 import { Clock, Star, Coffee } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
@@ -97,4 +96,5 @@ export default function FeaturedMinumanSection({ featuredMinuman }) {
       </div>
     </section>
   );
+
 }
