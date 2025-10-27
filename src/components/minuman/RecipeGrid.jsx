@@ -1,4 +1,3 @@
-// src/components/minuman/RecipeGrid.jsx
 import { Clock, Star, ChefHat, Heart } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
@@ -51,7 +50,6 @@ export default function RecipeGrid({ recipes, onRecipeClick, favorites, onToggle
                 : 'translate-y-8 opacity-0'
             }`}
           >
-            {/* Card structure is consistent, only the tag is changed */}
             <div
               onClick={() => onRecipeClick && onRecipeClick(recipe)}
               className="relative bg-white/15 backdrop-blur-xl border border-white/25 rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-2xl shadow-green-500/5 hover:shadow-green-500/15 transition-all duration-500 cursor-pointer group-hover:scale-105 group-hover:bg-white/20"
@@ -76,7 +74,6 @@ export default function RecipeGrid({ recipes, onRecipeClick, favorites, onToggle
               </div>
               <div className="relative z-10 p-4 md:p-8">
                 <div className="flex items-center justify-between mb-3 md:mb-4">
-                  {/* Changed tag color from blue to green */}
                   <span className="text-xs font-semibold text-green-700 bg-green-100/90 px-2 md:px-3 py-1 md:py-1.5 rounded-full">
                     Minuman
                   </span>
@@ -110,4 +107,5 @@ export default function RecipeGrid({ recipes, onRecipeClick, favorites, onToggle
       )}
     </section>
   );
+
 }
