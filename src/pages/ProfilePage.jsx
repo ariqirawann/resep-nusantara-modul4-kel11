@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { ProfileContext } from '../main';
 
-// src/pages/ProfilePage.jsx
 export default function ProfilePage() {
   const { profilePictures, handleProfilePictureChange } = useContext(ProfileContext);
 
@@ -15,13 +14,11 @@ export default function ProfilePage() {
   const handleFileChange = (index, event) => {
     const file = event.target.files[0];
     if (file) {
-      // Validate file size (max 5MB)
       if (file.size > 5 * 1024 * 1024) {
         alert('File size too large. Please select an image smaller than 5MB.');
         return;
       }
 
-      // Validate file type
       if (!file.type.startsWith('image/')) {
         alert('Please select a valid image file.');
         return;
@@ -50,14 +47,12 @@ export default function ProfilePage() {
           Profile Tim
         </h1>
 
-        {/* Team Members Section */}
         <div className="bg-white rounded-lg shadow-lg p-6">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Anggota Tim</h2>
           <div className="space-y-6">
             {initialMembers.map((member, index) => (
               <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
                 <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
-                  {/* Profile Picture */}
                   <div className="flex flex-col items-center">
                     <div className="w-24 h-24 rounded-full bg-gray-200 mb-2 flex items-center justify-center overflow-hidden">
                       {profilePictures[index] ? (
@@ -73,7 +68,6 @@ export default function ProfilePage() {
                       className="block w-full text-xs text-gray-500 file:mr-2 file:py-1 file:px-2 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                     />
                   </div>
-                  {/* Member Info */}
                   <div className="flex-1 text-center md:text-left">
                     <h3 className="text-lg font-medium text-gray-800">{member.name}</h3>
                     <p className="text-gray-600">NIM: {member.nim}</p>
@@ -87,3 +81,4 @@ export default function ProfilePage() {
     </div>
   );
 }
+
