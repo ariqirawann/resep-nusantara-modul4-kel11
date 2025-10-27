@@ -1,4 +1,3 @@
-// src/components/home/FeaturedMakananSection.jsx
 import { Clock, Star, ChefHat } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
@@ -54,7 +53,6 @@ export default function FeaturedMakananSection({ featuredMakanan }) {
               
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              {/* Recipe Image*/}
               <div className="relative h-32 md:h-56 overflow-hidden">
                 <img 
                   src={recipe.image_url}
@@ -96,4 +94,5 @@ export default function FeaturedMakananSection({ featuredMakanan }) {
       </div>
     </section>
   );
+
 }
