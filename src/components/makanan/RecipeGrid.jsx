@@ -1,4 +1,3 @@
-// src/components/makanan/RecipeGrid.jsx
 import { Clock, Star, ChefHat, Heart } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
@@ -115,4 +114,5 @@ export default function RecipeGrid({ recipes, onRecipeClick, favorites, onToggle
       )}
     </section>
   );
+
 }
