@@ -1,4 +1,3 @@
-// src/pages/MakananPage.jsx
 import { useState, useEffect } from 'react';
 import { ResepMakanan } from '../data/makanan';
 import RecipeGrid from '../components/makanan/RecipeGrid';
@@ -16,7 +15,6 @@ export default function MakananPage({ onRecipeClick, favorites, onToggleFavorite
     const filter = () => {
       let filtered = allMakanan;
 
-      // Filter by search
       if (searchQuery.trim() !== '') {
         const lowercasedQuery = searchQuery.toLowerCase();
         filtered = filtered.filter(recipe =>
@@ -24,7 +22,6 @@ export default function MakananPage({ onRecipeClick, favorites, onToggleFavorite
         );
       }
 
-      // Filter by ingredient count
       if (filterType !== 'all') {
         filtered = filtered.filter(recipe => {
           const count = recipe.ingredients.length;
@@ -38,7 +35,7 @@ export default function MakananPage({ onRecipeClick, favorites, onToggleFavorite
       }
 
       setFilteredRecipes(filtered);
-      setCurrentPage(1); // Reset to first page when filter changes
+      setCurrentPage(1); 
     };
 
     filter();
@@ -55,7 +52,6 @@ export default function MakananPage({ onRecipeClick, favorites, onToggleFavorite
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pb-20 md:pb-8">
       <main className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-12">
-        {/* Search and Filter */}
         <div className="mb-8 space-y-4">
           <div className="flex flex-col md:flex-row gap-4">
             <input
@@ -80,7 +76,6 @@ export default function MakananPage({ onRecipeClick, favorites, onToggleFavorite
 
         <RecipeGrid recipes={paginatedRecipes} onRecipeClick={onRecipeClick} favorites={favorites} onToggleFavorite={onToggleFavorite} />
 
-        {/* Pagination */}
         {totalPages > 1 && (
           <div className="flex justify-center mt-8 space-x-2">
             <button
@@ -116,3 +111,4 @@ export default function MakananPage({ onRecipeClick, favorites, onToggleFavorite
     </div>
   );
 }
+
